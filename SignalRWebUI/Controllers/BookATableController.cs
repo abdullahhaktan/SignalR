@@ -46,7 +46,7 @@ namespace SignalRWebUI.Controllers
             StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
             var responseMessage = await client.PostAsync("https://localhost:7186/api/Booking", stringContent);
 
-          
+
 
             if (responseMessage.IsSuccessStatusCode)
             {

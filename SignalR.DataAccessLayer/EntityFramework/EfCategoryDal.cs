@@ -2,11 +2,6 @@
 using SignalR.DataAccessLayer.Concrete;
 using SignalR.DataAccessLayer.Repositories;
 using SignalR.EntiyLayer.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SignalR.DataAccessLayer.EntityFramework
 {
@@ -18,7 +13,7 @@ namespace SignalR.DataAccessLayer.EntityFramework
 
         public int ActiveCategoryCount()
         {
-            using var context=new SignalRContext();
+            using var context = new SignalRContext();
             return context.Categories.Where(x => x.Status == true).Count();
         }
 

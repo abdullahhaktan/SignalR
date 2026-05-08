@@ -4,7 +4,7 @@ using SignalR.EntiyLayer.Entities;
 
 namespace SignalRApi.Mapping
 {
-    public class BookingMapping:Profile
+    public class BookingMapping : Profile
     {
         public BookingMapping()
         {

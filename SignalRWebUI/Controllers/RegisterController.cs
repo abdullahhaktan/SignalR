@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using SignalR.EntityLayer.Entities;
 using SignalRWebUI.Dtos.IdentityDtos;
@@ -21,7 +20,7 @@ namespace SignalRWebUI.Controllers
         }
 
         [HttpPost]
-        public async Task< IActionResult> Index(RegisterDto registerDto)
+        public async Task<IActionResult> Index(RegisterDto registerDto)
         {
             var appUser = new AppUser()
             {

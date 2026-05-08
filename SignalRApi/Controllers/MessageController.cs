@@ -1,10 +1,8 @@
 ﻿using AutoMapper;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SignalR.BusinessLayer.Abstract;
 using SignalR.DtoLayer.MessageDto;
 using SignalR.EntityLayer.Entities;
-using SignalR.EntiyLayer.Entities;
 
 namespace SignalRApi.Controllers
 {
@@ -26,15 +24,25 @@ namespace SignalRApi.Controllers
             var values = _messageService.TGetListAll();
             return Ok(_mapper.Map<List<ResultMessageDto>>(values));
         }
+
         [HttpPost]
         public IActionResult CreateMessage(CreateMessageDto createMessageDto)
         {
+            if(!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
             createMessageDto.Status = false;
             createMessageDto.MessageSendDate = DateTime.Now;
+            
             var value = _mapper.Map<Message>(createMessageDto);
+            
             _messageService.TAdd(value);
+            
             return Ok("Mesaj Başarılı Bir Şekilde Gönderildi");
         }
+
         [HttpDelete("{id}")]
         public IActionResult DeleteMessage(int id)
         {
@@ -42,18 +50,20 @@ namespace SignalRApi.Controllers
             _messageService.TDelete(value);
             return Ok("Mesaj Silindi");
         }
+
+        [HttpGet("{id}")]
+        public IActionResult GetMessage(int id)
+        {
+            var value = _messageService.TGetByID(id);
+            return Ok(_mapper.Map<GetByIdMessageDto>(value));
+        }
+
         [HttpPut]
         public IActionResult UpdateMessage(UpdateMessageDto updateMessageDto)
         {
             var value = _mapper.Map<Message>(updateMessageDto);
             _messageService.TUpdate(value);
             return Ok("Mesaj Bilgisi Güncellendi");
-        }
-        [HttpGet("{id}")]
-        public IActionResult GetMessage(int id)
-        {
-            var value = _messageService.TGetByID(id);
-            return Ok(_mapper.Map<GetByIdMessageDto>(value));
         }
     }
 }

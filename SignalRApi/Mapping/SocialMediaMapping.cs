@@ -4,7 +4,7 @@ using SignalR.EntityLayer.Entities;
 
 namespace SignalRApi.Mapping
 {
-    public class SocialMediaMapping:Profile
+    public class SocialMediaMapping : Profile
     {
         public SocialMediaMapping()
         {

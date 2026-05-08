@@ -4,7 +4,7 @@ using SignalR.EntiyLayer.Entities;
 
 namespace SignalRApi.Mapping
 {
-    public class DiscountMapping:Profile
+    public class DiscountMapping : Profile
     {
         public DiscountMapping()
         {

@@ -1,11 +1,8 @@
 ﻿using AutoMapper;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SignalR.BusinessLayer.Abstract;
-using SignalR.DtoLayer.CategoryDto;
 using SignalR.DtoLayer.ContactDto;
 using SignalR.EntityLayer.Entities;
-using SignalR.EntiyLayer.Entities;
 
 namespace SignalRApi.Controllers
 {
@@ -28,6 +25,7 @@ namespace SignalRApi.Controllers
             var value = _mapper.Map<List<ResultContactDto>>(_contactService.TGetListAll());
             return Ok(value);
         }
+
         [HttpPost]
         public IActionResult CreateContact(CreateContactDto createContactDto)
         {
@@ -35,6 +33,7 @@ namespace SignalRApi.Controllers
             _contactService.TAdd(value);
             return Ok("İletişim Bilgisi Eklendi");
         }
+
         [HttpDelete("{id}")]
         public IActionResult DeleteContact(int id)
         {
@@ -48,6 +47,7 @@ namespace SignalRApi.Controllers
             var value = _contactService.TGetByID(id);
             return Ok(_mapper.Map<GetContactDto>(value));
         }
+
         [HttpPut]
         public IActionResult UpdateContact(UpdateContactDto updateContactDto)
         {

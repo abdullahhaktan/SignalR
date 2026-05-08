@@ -1,10 +1,8 @@
 ﻿using AutoMapper;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SignalR.BusinessLayer.Abstract;
 using SignalR.DataAccessLayer.Concrete;
-using SignalR.DtoLayer.FeatureDto;
 using SignalR.DtoLayer.ProductDto;
 using SignalR.EntiyLayer.Entities;
 
@@ -140,7 +138,7 @@ namespace SignalRApi.Controllers
         [HttpGet("GetLast9Products")]
         public IActionResult GetLast9Products()
         {
-            var value=_productService.TGetLast9Products();
+            var value = _productService.TGetLast9Products();
             return Ok(value);
         }
     }

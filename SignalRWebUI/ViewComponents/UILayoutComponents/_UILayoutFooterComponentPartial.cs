@@ -4,7 +4,7 @@ using SignalRWebUI.Dtos.ContactDtos;
 
 namespace SignalRWebUI.ViewComponents.UILayoutComponents
 {
-    public class _UILayoutFooterComponentPartial:ViewComponent
+    public class _UILayoutFooterComponentPartial : ViewComponent
     {
         private readonly IHttpClientFactory _httpClientFactory;
         public _UILayoutFooterComponentPartial(IHttpClientFactory httpClientFactory)
@@ -17,7 +17,7 @@ namespace SignalRWebUI.ViewComponents.UILayoutComponents
             var responseMessage = await client.GetAsync("https://localhost:7186/api/Contact");
             var jsonData = await responseMessage.Content.ReadAsStringAsync();
             var values = JsonConvert.DeserializeObject<List<ResultContactDto>>(jsonData);
-            return View(values);
+            return View(values.ToList());
         }
     }
 }

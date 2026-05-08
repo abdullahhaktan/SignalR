@@ -1,11 +1,8 @@
 using FluentValidation;
-using SignalR.BusinessLayer.Abstract;
-using SignalR.BusinessLayer.Concrete;
+using FluentValidation.AspNetCore;
 using SignalR.BusinessLayer.Container;
 using SignalR.BusinessLayer.ValidationRules.BookingValidations;
-using SignalR.DataAccessLayer.Abstract;
 using SignalR.DataAccessLayer.Concrete;
-using SignalR.DataAccessLayer.EntityFramework;
 using SignalRApi.Hubs;
 using System.Reflection;
 using System.Text.Json.Serialization;
@@ -22,6 +19,7 @@ builder.Services.AddCors(opt =>
         .AllowCredentials();
     });
 });
+
 builder.Services.AddSignalR();
 
 builder.Services.AddDbContext<SignalRContext>();
@@ -31,16 +29,18 @@ builder.Services.ContainerDependencies();
 
 builder.Services.AddValidatorsFromAssemblyContaining<CreateBookingValidation>();
 
+builder.Services.AddFluentValidationAutoValidation();
+
+builder.Services.AddFluentValidationClientsideAdapters();
+
 ValidatorOptions.Global.LanguageManager.Culture = new System.Globalization.CultureInfo("tr");
 
 
 builder.Services.AddControllersWithViews()
     .AddJsonOptions(options => options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
 
-
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
+
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();

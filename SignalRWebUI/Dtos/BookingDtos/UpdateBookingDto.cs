@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SignalRWebUI.Dtos.BookingDtos
+﻿namespace SignalRWebUI.Dtos.BookingDtos
 {
     public class UpdateBookingDto
     {
@@ -14,6 +8,6 @@ namespace SignalRWebUI.Dtos.BookingDtos
         public string Mail { get; set; }
         public int PersonCount { get; set; }
         public DateTime Date { get; set; }
-		public string Description { get; set; }
-	}
+        public string Description { get; set; }
+    }
 }

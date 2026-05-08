@@ -4,8 +4,8 @@ using SignalRWebUI.Dtos.ProductDtos;
 
 namespace SignalRWebUI.ViewComponents.DefaultComponents
 {
-	public class _DefaultOurMenuComponentPartial:ViewComponent
-	{
+    public class _DefaultOurMenuComponentPartial : ViewComponent
+    {
         private readonly IHttpClientFactory _httpClientFactory;
         public _DefaultOurMenuComponentPartial(IHttpClientFactory httpClientFactory)
         {

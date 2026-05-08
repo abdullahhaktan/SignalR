@@ -2,11 +2,6 @@
 using Microsoft.EntityFrameworkCore;
 using SignalR.EntityLayer.Entities;
 using SignalR.EntiyLayer.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SignalR.DataAccessLayer.Concrete
 {
@@ -14,7 +9,7 @@ namespace SignalR.DataAccessLayer.Concrete
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=DESKTOP-R7AR1ND;initial Catalog=SignalRDb;integrated Security=true");
+            optionsBuilder.UseSqlServer("Server=ABDULLAH;initial Catalog=SignalRDb;integrated Security=true");
         }
         public DbSet<About> Abouts { get; set; }
         public DbSet<Booking> Bookings { get; set; }

@@ -14,3 +14,20 @@
 @await Html.PartialAsync("SendMessage.cshtml")
 
 @await Component.InvokeAsync("_DefaultTestimonialComponentPartial")
+
+<!-- SADECE BURADA SCRIPT OLSUN -->
+@if (ViewBag.ScrollToContact != null && ViewBag.ScrollToContact == true)
+{
+    <script>
+        // Sayfa tam yüklendiğinde contact bölümüne kaydır
+        window.addEventListener('load', function() {
+            const contactSection = document.getElementById('contact');
+            if(contactSection) {
+                contactSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'center'
+                });
+            }
+        });
+    </script>
+}

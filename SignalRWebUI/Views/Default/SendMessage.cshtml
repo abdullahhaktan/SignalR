@@ -1,6 +1,6 @@
 ﻿@model CreateMessageDto
 
-<section class="book_section layout_padding">
+<section id="contact" class="book_section layout_padding">
     <div class="container">
         <div class="heading_container">
             <h2>
@@ -11,22 +11,27 @@
             <div class="col-md-6">
                 <div class="form_container">
                     <form method="post" asp-action="SendMessage" asp-controller="Default">
-                        <div>
+                        <div class="form-group">
                             <input type="text" class="form-control" placeholder="Adınız Soyadınız" asp-for="NameSurname" />
+                            <span asp-validation-for="NameSurname" class="text-danger validation-message"></span>
                         </div>
-                        <div>
+                        <div class="form-group">
                             <input type="text" class="form-control" placeholder="Telefon Numaranız" asp-for="Phone" />
+                            <span asp-validation-for="Phone" class="text-danger validation-message"></span>
                         </div>
-                        <div>
+                        <div class="form-group">
                             <input type="email" class="form-control" placeholder="Email Adresiniz" asp-for="Mail" />
+                            <span asp-validation-for="Mail" class="text-danger validation-message"></span>
                         </div>
-                        <div>
+                        <div class="form-group">
                             <input type="text" class="form-control" placeholder="Konu" asp-for="Subject" />
+                            <span asp-validation-for="Subject" class="text-danger validation-message"></span>
                         </div>
-                        <div>
+                        <div class="form-group">
                             <textarea asp-for="MessageContent" rows="10" placeholder="Buraya mesajınızı yazabilirsiniz..." class="form-control"></textarea>
+                            <span asp-validation-for="MessageContent" class="text-danger validation-message"></span>
                         </div>
-                      
+
                         <div class="btn_box">
                             <button>
                                 Mesajı Gönder
@@ -43,4 +48,49 @@
         </div>
     </div>
 </section>
- 
+
+<style>
+    /* Validasyon hata stilleri */
+    .form-group {
+        margin-bottom: 20px;
+        position: relative;
+    }
+
+    .validation-message {
+        display: block;
+        font-size: 12px;
+        margin-top: 5px;
+        color: #dc3545 !important;
+    }
+
+    /* Hatalı inputların kırmızı border alması */
+    .input-validation-error {
+        border-color: #dc3545 !important;
+        box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+    }
+
+    /* Başarılı inputlar */
+    .valid {
+        border-color: #28a745;
+    }
+
+    /* Hata mesajları için animasyon */
+    .validation-message {
+        animation: fadeIn 0.3s ease-in-out;
+    }
+
+    @@keyframes fadeIn {
+        from
+
+    {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    }
+</style>

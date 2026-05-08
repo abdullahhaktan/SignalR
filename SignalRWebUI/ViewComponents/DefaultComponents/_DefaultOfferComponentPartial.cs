@@ -1,11 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using SignalRWebUI.Dtos.DiscountDtos;
-using SignalRWebUI.Dtos.SliderDtos;
 
 namespace SignalRWebUI.ViewComponents.DefaultComponents
 {
-    public class _DefaultOfferComponentPartial:ViewComponent
+    public class _DefaultOfferComponentPartial : ViewComponent
     {
         private readonly IHttpClientFactory _httpClientFactory;
         public _DefaultOfferComponentPartial(IHttpClientFactory httpClientFactory)

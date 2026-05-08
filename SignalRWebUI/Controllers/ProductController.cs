@@ -32,8 +32,8 @@ namespace SignalRWebUI.Controllers
         {
             var client = _httpClientFactory.CreateClient();
             var responseMessage = await client.GetAsync("https://localhost:7186/api/Category");
-            var jsonData=await responseMessage.Content.ReadAsStringAsync();
-            var values=JsonConvert.DeserializeObject<List<ResultCategoryDto>>(jsonData);
+            var jsonData = await responseMessage.Content.ReadAsStringAsync();
+            var values = JsonConvert.DeserializeObject<List<ResultCategoryDto>>(jsonData);
             List<SelectListItem> values2 = (from x in values
                                             select new SelectListItem
                                             {

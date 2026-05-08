@@ -4,6 +4,7 @@
     {
         public List<ResultTastyApi> Results { get; set; }
     }
+
     public class ResultTastyApi
     {
         public string Name { get; set; }

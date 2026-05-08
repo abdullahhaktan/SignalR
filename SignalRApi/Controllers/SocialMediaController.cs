@@ -1,9 +1,7 @@
 ﻿using AutoMapper;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SignalR.BusinessLayer.Abstract;
 using SignalR.DtoLayer.SocialMediaDto;
-using SignalR.DtoLayer.TestimonialDto;
 using SignalR.EntityLayer.Entities;
 
 namespace SignalRApi.Controllers

@@ -4,7 +4,7 @@ using SignalR.EntiyLayer.Entities;
 
 namespace SignalRApi.Mapping
 {
-    public class CategoryMapping:Profile
+    public class CategoryMapping : Profile
     {
         public CategoryMapping()
         {

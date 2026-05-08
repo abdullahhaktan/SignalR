@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using FluentValidation;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SignalR.BusinessLayer.Abstract;
 using SignalR.DtoLayer.BookingDto;
@@ -28,6 +27,7 @@ namespace SignalRApi.Controllers
             var values = _bookingService.TGetListAll();
             return Ok(_mapper.Map<List<ResultBookingDto>>(values));
         }
+
         [HttpPost]
         public IActionResult CreateBooking(CreateBookingDto createBookingDto)
         {

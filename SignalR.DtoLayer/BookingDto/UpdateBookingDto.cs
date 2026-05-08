@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SignalR.DtoLayer.BookingDto
+﻿namespace SignalR.DtoLayer.BookingDto
 {
     public class UpdateBookingDto
     {
@@ -14,6 +8,6 @@ namespace SignalR.DtoLayer.BookingDto
         public string Mail { get; set; }
         public int PersonCount { get; set; }
         public DateTime Date { get; set; }
-		public string Description { get; set; }
-	}
+        public string Description { get; set; }
+    }
 }

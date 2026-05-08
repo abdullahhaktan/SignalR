@@ -1,7 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using QRCoder;
-using System.Drawing;
-using System.Drawing.Imaging;
 
 namespace SignalRWebUI.Controllers
 {

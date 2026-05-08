@@ -1,10 +1,5 @@
 ﻿using SignalR.DataAccessLayer.Abstract;
 using SignalR.DataAccessLayer.Concrete;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SignalR.DataAccessLayer.Repositories
 {
@@ -39,7 +34,7 @@ namespace SignalR.DataAccessLayer.Repositories
 
         public void Update(T entity)
         {
-           _context.Update(entity);
+            _context.Update(entity);
             _context.SaveChanges();
         }
     }

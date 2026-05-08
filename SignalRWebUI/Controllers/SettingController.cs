@@ -31,8 +31,8 @@ namespace SignalRWebUI.Controllers
             if (userEditDto.Password == userEditDto.ConfirmPassword)
             {
                 var user = await _userManager.FindByNameAsync(User.Identity.Name);
-                user.Name=userEditDto.Name;
-                user.Surname=userEditDto.Surname;
+                user.Name = userEditDto.Name;
+                user.Surname = userEditDto.Surname;
                 user.Email = userEditDto.Mail;
                 user.UserName = userEditDto.Username;
                 user.PasswordHash = _userManager.PasswordHasher.HashPassword(user, userEditDto.Password);

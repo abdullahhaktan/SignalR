@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using SignalR.BusinessLayer.Abstract;
 
 namespace SignalRApi.Controllers
@@ -35,7 +34,7 @@ namespace SignalRApi.Controllers
         [HttpGet("TodayTotalPrice")]
         public IActionResult TodayTotalPrice()
         {
-            return Ok(_orderService.TTodayTotalPrice());    
+            return Ok(_orderService.TTodayTotalPrice());
         }
     }
 }
