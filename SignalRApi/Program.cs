@@ -35,7 +35,6 @@ builder.Services.AddFluentValidationClientsideAdapters();
 
 ValidatorOptions.Global.LanguageManager.Culture = new System.Globalization.CultureInfo("tr");
 
-
 builder.Services.AddControllersWithViews()
     .AddJsonOptions(options => options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
 

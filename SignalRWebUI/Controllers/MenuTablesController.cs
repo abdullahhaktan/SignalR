@@ -8,10 +8,12 @@ namespace SignalRWebUI.Controllers
     public class MenuTablesController : Controller
     {
         private readonly IHttpClientFactory _httpClientFactory;
+
         public MenuTablesController(IHttpClientFactory httpClientFactory)
         {
             _httpClientFactory = httpClientFactory;
         }
+
         public async Task<IActionResult> Index()
         {
             var client = _httpClientFactory.CreateClient();
@@ -24,11 +26,13 @@ namespace SignalRWebUI.Controllers
             }
             return View();
         }
+
         [HttpGet]
         public IActionResult CreateMenuTable()
         {
             return View();
         }
+
         [HttpPost]
         public async Task<IActionResult> CreateMenuTable(CreateMenuTableDto createMenuTableDto)
         {
@@ -53,6 +57,7 @@ namespace SignalRWebUI.Controllers
             }
             return View();
         }
+
         [HttpGet]
         public async Task<IActionResult> UpdateMenuTable(int id)
         {
@@ -66,6 +71,7 @@ namespace SignalRWebUI.Controllers
             }
             return View();
         }
+
         [HttpPost]
         public async Task<IActionResult> UpdateMenuTable(UpdateMenuTableDto updateMenuTableDto)
         {
