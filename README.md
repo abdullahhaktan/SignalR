@@ -175,6 +175,10 @@ dotnet run --project SignalR.WebUI
 
 ---
 
+<img width="327" height="410" alt="Ekran görüntüsü 2026-02-17 123043" src="https://github.com/user-attachments/assets/e0fe7c50-9832-41ac-9c77-ca2165f5e67d" />
+
+---
+
 <img width="800" height="600" alt="Ekran görüntüsü 2026-06-26 114619" src="https://github.com/user-attachments/assets/eb5c5256-8e92-4422-a149-7a0f8fecfff1" />
 
 ---
