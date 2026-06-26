@@ -171,23 +171,23 @@ dotnet run --project SignalR.WebUI
 
 ## 📸 Ekran Görüntüleri / Screenshots
 
-<img width="3150" height="2064" alt="Giriş" src="https://github.com/user-attachments/assets/f69b977d-ae11-44f4-bcd6-88d168cc29b2" />
+<img width="800" height="600" alt="Giriş" src="https://github.com/user-attachments/assets/f69b977d-ae11-44f4-bcd6-88d168cc29b2" />
 
 ---
 
-<img width="398" height="279" alt="Ekran görüntüsü 2026-06-26 114619" src="https://github.com/user-attachments/assets/eb5c5256-8e92-4422-a149-7a0f8fecfff1" />
+<img width="800" height="600" alt="Ekran görüntüsü 2026-06-26 114619" src="https://github.com/user-attachments/assets/eb5c5256-8e92-4422-a149-7a0f8fecfff1" />
 
 ---
 
-<img width="397" height="279" alt="Ekran görüntüsü 2026-06-26 114659" src="https://github.com/user-attachments/assets/7d9c7416-6687-4dd4-b5d1-e19f89e62d0c" />
+<img width="800" height="600" alt="Ekran görüntüsü 2026-06-26 114659" src="https://github.com/user-attachments/assets/7d9c7416-6687-4dd4-b5d1-e19f89e62d0c" />
 
 ---
 
-<img width="399" height="266" alt="Ekran görüntüsü 2026-06-26 114735" src="https://github.com/user-attachments/assets/6a090aaf-e236-4438-a516-c5705f7f5901" />
+<img width="800" height="600" alt="Ekran görüntüsü 2026-06-26 114735" src="https://github.com/user-attachments/assets/6a090aaf-e236-4438-a516-c5705f7f5901" />
 
 ---
 
-<img width="244" height="305" alt="Ekran görüntüsü 2026-06-26 114812" src="https://github.com/user-attachments/assets/719eeab9-1367-453c-a44e-9908fd62be22" />
+<img width="800" height="600" alt="Ekran görüntüsü 2026-06-26 114812" src="https://github.com/user-attachments/assets/719eeab9-1367-453c-a44e-9908fd62be22" />
 
 
 ## 👨‍💻 Mühendis & Geliştirici / Engineer & Developer
